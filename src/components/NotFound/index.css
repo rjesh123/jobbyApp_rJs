@@ -1,0 +1,39 @@
+.app-container {
+  background-color: #000000;
+  background-size: cover;
+  height: 100vh;
+}
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.not-found-heading {
+  color: #ffffff;
+  font-family: 'roboto';
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 576px) {
+  .not-found-heading {
+    font-size: 40px;
+  }
+}
+
+.not-found-description {
+  color: #ffffff;
+  font-family: 'roboto';
+  font-size: 22px;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .not-found-description {
+    font-size: 24px;
+  }
+}
