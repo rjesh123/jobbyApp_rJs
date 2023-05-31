@@ -1,0 +1,59 @@
+.employment-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-line {
+  margin-top: 20px;
+  width: 100%;
+  color: #7e858e;
+}
+
+@media screen and (min-width: 576px) {
+  .hr-line {
+    margin-top: 30px;
+  }
+}
+
+.heading {
+  color: #f8fafc;
+  font-family: 'roboto';
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 576px) {
+  .heading {
+    font-size: 20px;
+  }
+}
+
+.employment-list-item {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 576px) {
+  .employment-list-item {
+    margin-bottom: 15px;
+  }
+}
+
+.label-text {
+  color: #f8fafc;
+  font-family: 'roboto';
+  font-weight: normal;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 576px) {
+  .label-text {
+    font-size: 18px;
+  }
+}
