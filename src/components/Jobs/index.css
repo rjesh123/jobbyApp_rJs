@@ -198,8 +198,67 @@
 }
 
 .jobs-list-container {
-  border: 2px solid red;
   margin-top: 10px;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 0px;
+}
+
+.no-jobs-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 576px) {
+  .no-jobs-view-container {
+    width: 100%;
+    margin-top: 100px;
+    padding-right: 20px;
+  }
+}
+
+.no-jobs-image {
+  height: 180px;
+  width: 75%;
+}
+
+@media screen and (min-width: 576px) {
+  .no-jobs-image {
+    height: 250px;
+    width: 80%;
+  }
+}
+
+.no-jobs-heading {
+  color: #ffffff;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 576px) {
+  .no-jobs-heading {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+}
+
+.no-jobs-description {
+  color: #f8fafc;
+  font-family: 'roboto';
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .no-jobs-description {
+    font-size: 20px;
+    margin-top: 30px;
+  }
 }

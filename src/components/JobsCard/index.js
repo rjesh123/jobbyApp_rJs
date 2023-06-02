@@ -5,7 +5,7 @@ import {MdHome} from 'react-icons/md'
 import './index.css'
 
 const JobsCard = props => {
-  const {jobDetails, jobsList} = props
+  const {jobDetails} = props
   const {
     companyLogoUrl,
     employmentType,
@@ -16,21 +16,6 @@ const JobsCard = props => {
     rating,
     title,
   } = jobDetails
-
-  const renderNoJobsView = () => (
-    <div className="no-jobs-view-container">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png "
-        alt="no jobs"
-        className="no-jobs-image"
-      />
-      <h1 className="no-jobs-heading">No Jobs Found</h1>
-      <p className="no-jobs-description">
-        We cannot seem to find the you are looking for.
-      </p>
-    </div>
-  )
-
   const renderJobsView = () => (
     <Link to={`/jobs/${id}`} className="link-item">
       <li key={id} className="job-item-container">
@@ -68,7 +53,7 @@ const JobsCard = props => {
     </Link>
   )
 
-  return jobsList.length > 0 ? renderJobsView() : renderNoJobsView()
+  return renderJobsView()
 }
 
 export default JobsCard

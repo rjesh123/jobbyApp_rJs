@@ -125,14 +125,30 @@ class Jobs extends Component {
     </div>
   )
 
+  renderNoJobsView = () => (
+    <div className="no-jobs-view-container">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png "
+        alt="no jobs"
+        className="no-jobs-image"
+      />
+      <h1 className="no-jobs-heading">No Jobs Found</h1>
+      <p className="no-jobs-description">
+        We cannot seem to find the you are looking for.
+      </p>
+    </div>
+  )
+
   renderJobsSuccessView = () => {
     const {jobsList} = this.state
-    return (
+    return jobsList.length > 0 ? (
       <ul className="jobs-list-container">
         {jobsList.map(eachJob => (
           <JobsCard jobDetails={eachJob} key={eachJob.id} jobsList={jobsList} />
         ))}
       </ul>
+    ) : (
+      this.renderNoJobsView()
     )
   }
 
@@ -151,8 +167,14 @@ class Jobs extends Component {
     }
   }
 
+  onEnterSearchInput = event => {
+    if (event.key === 'Enter') {
+      this.getJobsList()
+    }
+  }
+
   onChangeSearchInput = event => {
-    this.setState({searchInput: event.target.value}, this.getJobsList)
+    this.setState({searchInput: event.target.value})
   }
 
   renderSearchInput = () => {
@@ -166,6 +188,7 @@ class Jobs extends Component {
           placeholder="Search"
           value={searchInput}
           onChange={this.onChangeSearchInput}
+          onKeyDown={this.onEnterSearchInput}
         />
         <button
           type="button"
